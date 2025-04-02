@@ -1,4 +1,6 @@
 /* COMENTARIO - SHIFT + ALT = A */
+/* CLASSE = .XXXX
+    ID = #XXXXXXX */
 
 * {
     margin: 0;
@@ -12,6 +14,15 @@ body{
     background-color: rgb(0, 0, 0);
 }
 
+a { /* icones */
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+ul{ /* listas não ordenadas */
+    list-style: none;
+}
+
 html[data-theme='dark'] .logo {
     filter: invert(1);
 }
@@ -23,12 +34,41 @@ html[data-theme='dark'] .logo {
     align-items: center;
     width: 100%;
     padding: 8px 16px;
-    z-index: 999999;
-
-
 }
 
 .logo { /* LOGO */
     width: 350px; /* largura */
     height: auto; /* altura */
 }
+
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* menu desktop */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.menu-link{
+    display: flex;
+    text-transform: uppercase;
+}
+
+
+/* icone e texto têm as mesmas propriedades */
+#toggleTheme {
+    color: whitesmoke; /* cor de texto */
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+
+}
+
