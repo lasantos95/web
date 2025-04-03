@@ -132,13 +132,19 @@ html[data-theme='dark'] .logo {
     z-index: 1;
 }
 
-.menu-link.active .menu-icone,
+.menu-link.active .icone-link,
 .menu-link.active .menu-texto,
-.menu-link:hover .menu-icone,
+.menu-link:hover .icone-link,
 .menu-link:hover .menu-texto {
-    color: purple;
+    color: rgb(112, 9, 9);
+    font-weight: 800;
 }
 
+.menu-icone,
+.menu-texto {
+    color: #817575;
+    font-weight: 200;
+}
 
 /* CSS Responsivo */
 
