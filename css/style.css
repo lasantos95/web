@@ -35,7 +35,8 @@ Inter:
 }
 
 body {
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(39,39,39);
+    color: whitesmoke;
 }
 
 /*links*/
@@ -144,6 +145,10 @@ html[data-theme='dark'] .logo {
 .menu-texto {
     color: #817575;
     font-weight: 200;
+}
+
+.icone-link {
+    font-size: 25px;
 }
 
 /* CSS Responsivo */
