@@ -1,27 +1,125 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
 
 /* 
 
 Root Font
 
-
-Patua one:
-  font-family: "Patua One", serif;
-  font-weight: 400;
-  font-style: normal;
-
-Outfit:
-  font-family: "Outfit", sans-serif;
+.sora-<uniquifier> {
+  font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
+}
 
-Inter:
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
 */
 
 
@@ -55,6 +153,31 @@ ul {
 html[data-theme='dark'] .logo {
     filter: invert(1);
 }
+
+h1 {
+    font-size: 60px;
+    font-weight: 200;
+    font-family: "Sora", sans-serif;
+    letter-spacing: 3px;
+
+}
+
+p,
+li,
+span,{
+    font-size:12px
+    }
+
+p{
+    text-align: justify;
+}
+
+strong{
+    font-weight: 800;
+    color: rgb(238, 238, 238);
+
+}
+
 
 /* Manipulação cabeçalho */
 #header {
@@ -108,7 +231,7 @@ html[data-theme='dark'] .logo {
 .menu-texto{
     font-size: 12px; /* tamanho da fonte */
     text-transform: uppercase; /* todas as letras em caixa alta */
-    font-family: "Outfit", sans-serif; /* estilização de fonte */  
+    font-family: "Sora", sans-serif; /* estilização de fonte */  
     font-weight: 300; /* espessura da letra (normalmente entre 100-900) */
 }
 
@@ -150,6 +273,55 @@ html[data-theme='dark'] .logo {
 .icone-link {
     font-size: 25px;
 }
+/* Fim do CSS do Menu */
+
+/* HOME / MAIN */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.video iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align: center;
+    gap: 10px;
+    background: transparent;
+    width: 100%;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+.btn-primary{
+    border: 1px solid whitesmoke;
+}
+
+.btn span,
+.btn i{
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.btn:hover{
+    transform: scale(1.02);
+    transition: all ease-in-out .2s;
+}
+
+
 
 /* CSS Responsivo */
 
