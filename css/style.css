@@ -12,39 +12,9 @@ Root Font
   font-style: normal;
 }
 
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
 .poppins-light {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
   font-style: normal;
 }
 
@@ -52,72 +22,6 @@ Root Font
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
 }
 
 */
@@ -254,13 +158,14 @@ strong{
     justify-content: space-between;
     border-top: 1px solid #989898;
     z-index: 1;
+    background-color: black;
 }
 
 .menu-link.active .icone-link,
 .menu-link.active .menu-texto,
 .menu-link:hover .icone-link,
 .menu-link:hover .menu-texto {
-    color: rgb(112, 9, 9);
+    color: #700909;
     font-weight: 800;
 }
 
@@ -321,6 +226,17 @@ strong{
     transition: all ease-in-out .2s;
 }
 
+.btn:hover span, 
+.btn:hover i {
+  color: #700909; 
+}
+
+/* Estrutura */
+
+/* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */
+#home{
+  padding: 40px 16px;
+}
 
 
 /* CSS Responsivo */
@@ -328,7 +244,13 @@ strong{
 /* @media cria a possibilidade de criação de tela */
 /* a partir telas 768px */
 @media (min-width: 768px) {
-    .header-nav {
+    
+  #header {
+    background-color:black;
+    position:fixed;
+
+  }
+  .header-nav {
         display: flex;
     }
 
@@ -340,8 +262,18 @@ strong{
     .nav-mobile {
         display: none;
     }
+
+    #home { /* atualização futura */
+      padding: 128px 96px 64px;
+    }
 }
 
+/* 1200px */
+@media (min-width: 1200px) {
+  #home {
+    padding: 160px 96px 32px;
+  }
+}
 
 
 
