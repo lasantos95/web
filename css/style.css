@@ -1,10 +1,27 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
 
+/* Definir cores tema dark */
+:root,
+:root[data-theme="dark"] {
+  --fundo-header: purple;
+  --h1: yellow;
+  --background-color: purple;
+  --color: yellow;
+  --color-header:yellow;
+}
+
+/* definir cores tema Light */
+:root[data-theme="light"] {
+  --fundo-header: yellow;
+  --h1: purple;
+  --background-color:yellow;
+  --color:purple;
+  --color-header:purple;
+}
+
 /* 
-
 Root Font
-
 .sora-<uniquifier> {
   font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
@@ -37,8 +54,8 @@ Root Font
 }
 
 body {
-    background-color: rgb(39,39,39);
-    color: whitesmoke;
+    background-color: var(--background-color);
+    color: var(--color);
 }
 
 /*links*/
@@ -59,17 +76,17 @@ html[data-theme='dark'] .logo {
 }
 
 h1 {
-    font-size: 60px;
+    color: var(--h1);
+    font-size: 40px;
     font-weight: 200;
     font-family: "Sora", sans-serif;
     letter-spacing: 3px;
-
 }
 
 p,
 li,
-span,{
-    font-size:12px
+span{
+    font-size:12px;
     }
 
 p{
@@ -78,8 +95,7 @@ p{
 
 strong{
     font-weight: 800;
-    color: rgb(238, 238, 238);
-
+    color: var(--h1);
 }
 
 
@@ -107,11 +123,10 @@ strong{
 
 /* Icone Cabeçalho (ID) */
 #toggleTheme {
-    color: white; /* cor de texto */
+    color: var(--color-header); /* cor de texto */
     font-size: 20px; /* tamanho da fonte */
     cursor: pointer; /* sinalizando q é um clique */
     transition: all 0.6s ease-in-out; /* transição entre modo dark e light */
-
 }
 
 /* menu desktop */
@@ -119,7 +134,6 @@ strong{
     display: flex;
     align-items: center;
     gap: 25px; /*gap(vão) espaço entre campos dentro do campo pai */
-
 }
 
 .menu-item {
@@ -202,7 +216,7 @@ strong{
 .btn{
     display: flex;
     justify-content: center;
-    align: center;
+    align-items: center;
     gap: 10px;
     background: transparent;
     width: 100%;
@@ -231,6 +245,15 @@ strong{
   color: #700909; 
 }
 
+.icon-social {
+  font-size: 20px;
+  color:#989898;
+}
+
+.icon-social:hover{
+  color: #6e6a6a;
+}
+
 /* Estrutura */
 
 /* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */
@@ -246,10 +269,12 @@ strong{
 @media (min-width: 768px) {
     
   #header {
-    background-color:black;
+    background-color: var(--fundo-header);
     position:fixed;
-
+    border-bottom: 1px solid #989898;
+    padding: 16px 96px;
   }
+  
   .header-nav {
         display: flex;
     }
@@ -266,6 +291,12 @@ strong{
     #home { /* atualização futura */
       padding: 128px 96px 64px;
     }
+
+    .main-content{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 }
 
 /* 1200px */
@@ -274,12 +305,3 @@ strong{
     padding: 160px 96px 32px;
   }
 }
-
-
-
-
-
-
-
-
-
