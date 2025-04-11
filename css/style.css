@@ -4,20 +4,30 @@
 /* Definir cores tema dark */
 :root,
 :root[data-theme="dark"] {
-  --fundo-header: purple;
-  --h1: yellow;
-  --background-color: purple;
-  --color: yellow;
-  --color-header:yellow;
+  --fundo-header: #750489;
+  --h1: #ffed00;
+  --background-color: #750489;
+  --color: #ffed00;
+  --color-header:#ffed00;
+  --color-link: #ffed00;
+  --color-text:#ffed00;
+  --color-btn:#ffed00;
+  --color-shadow: #460252;
+  --color-list: #ffed00;
 }
 
 /* definir cores tema Light */
 :root[data-theme="light"] {
-  --fundo-header: yellow;
-  --h1: purple;
-  --background-color:yellow;
-  --color:purple;
-  --color-header:purple;
+  --fundo-header: #ffed00;
+  --h1: #750489;
+  --background-color:#ffed00;
+  --color:#750489;
+  --color-header: #750489;
+  --color-link: #750489;
+  --color-text: #750489;
+  --color-btn: #750489;
+  --color-shadow: #ecdd0b;
+  --color-list:#750489;
 }
 
 /* 
@@ -50,7 +60,11 @@ Root Font
     padding: 0;
     box-sizing: border-box; /*  */
     scrollbar-width: thin;/* muda o tamanho da barra de rolagem */
-    scrollbar-color: red;/* muda cor da barra de rolagem  */
+    scrollbar-color: var(--color);/* muda cor da barra de rolagem  */
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body {
@@ -60,7 +74,7 @@ body {
 
 /*links*/
 a {
-    color:white;
+    color: var(--color-link);
     text-decoration: none;/* tirar sublinhado dos links */
 
 }
@@ -83,6 +97,22 @@ h1 {
     letter-spacing: 3px;
 }
 
+h2{
+    color: var(--color-text);
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+h3{
+    color: var(--color-text);
+    font-size: 25px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+
+
 p,
 li,
 span{
@@ -90,6 +120,7 @@ span{
     }
 
 p{
+    font-family: "Poppins", sans-serif;
     text-align: justify;
 }
 
@@ -98,6 +129,10 @@ strong{
     color: var(--h1);
 }
 
+#tagline{
+    font-weight: 500;
+    text-transform: uppercase;
+}
 
 /* Manipulação cabeçalho */
 #header {
@@ -111,7 +146,7 @@ strong{
 
 /* Logo */
 .logo {
-    width: 80px; /* comprimento(horizontal) */
+    width: 150px; /* comprimento(horizontal) */
     height: auto; /* altura (vertical) */
 }
 
@@ -179,13 +214,13 @@ strong{
 .menu-link.active .menu-texto,
 .menu-link:hover .icone-link,
 .menu-link:hover .menu-texto {
-    color: #700909;
+    color: var(--color-header);
     font-weight: 800;
 }
 
 .menu-icone,
 .menu-texto {
-    color: #817575;
+    color: var(--color-text);
     font-weight: 200;
 }
 
@@ -211,6 +246,7 @@ strong{
 .video iframe{
     width: 100%;
     aspect-ratio: 16/9;
+    border-radius: 10px;
 }
 
 .btn{
@@ -226,12 +262,16 @@ strong{
 }
 
 .btn-primary{
-    border: 1px solid whitesmoke;
+    border: 1px solid var(--color-btn);
+}
+
+.btn-primary:hover {
+    border: 1px solid var(--bgd);
 }
 
 .btn span,
 .btn i{
-    color: whitesmoke;
+    color: var(--color-btn);
     font-size: 18px;
 }
 
@@ -242,24 +282,72 @@ strong{
 
 .btn:hover span, 
 .btn:hover i {
-  color: #700909; 
+  color: var(--color-btn); 
 }
 
 .icon-social {
   font-size: 20px;
-  color:#989898;
+  color: var(--color-btn);
 }
 
 .icon-social:hover{
-  color: #6e6a6a;
+  color: var(--color-btn);
 }
 
 /* Estrutura */
+/* Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.projeto-card{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.card-img {
+    width: 100%;
+    pointer-events: none;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0px 5px 5px var(--color-shadow); /* eixo X eixo Y blur */
+}
+
+.card-description{
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 15px;
+}
+
+.icon-list {
+    color: var(--color-list) ;
+    font-size: 10px;
+}
+
+.card-item {
+    margin-left: 10px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
+}
+
 
 /* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */
-#home{
+#home,
+.projetos{
   padding: 40px 16px;
 }
+
 
 
 /* CSS Responsivo */
@@ -287,9 +375,11 @@ strong{
     .nav-mobile {
         display: none;
     }
-
-    #home { /* atualização futura */
-      padding: 128px 96px 64px;
+    
+    /* Atualização futura */ 
+    #home,
+    .projetos{
+        padding: 128px 96px 64px 96px; /* 1° top 2°right 3°bottom 4°left */
     }
 
     .main-content{
@@ -299,9 +389,55 @@ strong{
     }
 }
 
+@media (min-width: 992px) {
+    .projeto-card {
+        flex-direction: row;
+    }
+
+    .card-img{
+        width: 55%;
+    }
+}
+
 /* 1200px */
 @media (min-width: 1200px) {
   #home {
     padding: 160px 96px 32px;
   }
+}
+
+/* 1200px */
+@media (min-width: 1200px) {
+
+    #home{
+        padding: 160px 96px 32px;  /* 1° top 2°right&left 3° bottom*/
+    }
+
+    h1{
+        font-size: 85px;
+    }
+
+    h2{
+        font-size: 65px;
+    }
+
+    p, span, li{
+        font-size: 22px;
+    }
+}
+
+/* 1400px */
+@media (min-width: 1400px) {
+
+    h1{
+        font-size: 100px;
+    }
+
+    h2{
+        font-size: 70px;
+    }
+
+    .projetos{
+        padding: 160px 240px 64px;
+    }
 }
