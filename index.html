@@ -15,6 +15,9 @@
     <!-- fav icon - icone da head - colocar logo em favicon.com, transformar o PNG em ícone e colocar apenas o favicon.ico na pasta de img -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -54,9 +57,9 @@
         </nav> <!-- Fim Menu desktop -->
 
         <!-- Logo -->
-        <div>
+        <div data-aos="zoom-in" data-delay="200">
             <a href="#home">
-                <img src="img/logo.png" alt="" class="logo">
+                <img src="img/logo.svg" alt="" class="logo">
             </a>
         </div>
 
@@ -109,10 +112,10 @@
     
     <main id="home"> <!-- CONTEÚDO DESTAQUE -->
         
-        <div class="main-content">
+        <div class="main-content" data-aos="zoom-in" data-aos-delay="300">
             
             <h1>
-                <strong>
+                <strong data-aos="zoom-in" data-aos-delay="800">
                     Soluções Digitais &
                 </strong>
                 Desenvolvimento Front-End
@@ -223,7 +226,7 @@
 
                 <!-- Projeto 2 -->
     
-                <article class="projeto-card">
+                <article class="projeto-card card-reverse">
     
                     <img src="img/josisbox.jpg" alt="" class="card-img">
     
@@ -299,6 +302,19 @@
             </div>
     
         </section>
+
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script src="js/script.js"></script>
+
+        <script>
+            AOS.init({
+                duration:900
+            });
+        </script>
+
+
 
 </body>
 

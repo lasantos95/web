@@ -91,10 +91,11 @@ html[data-theme='dark'] .logo {
 
 h1 {
     color: var(--h1);
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 200;
     font-family: "Sora", sans-serif;
     letter-spacing: 3px;
+    align-items: center;
 }
 
 h2{
@@ -142,6 +143,7 @@ strong{
     align-items: center; /* espaço por igual entre objetos (vertical) */
     width: 100%; /* ocupar a tela na verical */
     padding: 10px 20px;
+    z-index: 99999;
 }
 
 /* Logo */
@@ -341,6 +343,13 @@ strong{
     font-family: "Poppins", sans-serif;
 }
 
+.card-body {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:start
+}
+
 
 /* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */
 #home,
@@ -351,6 +360,9 @@ strong{
 
 
 /* CSS Responsivo */
+
+/* min-width = a partir de */
+/* max-width = até o valor */
 
 /* @media cria a possibilidade de criação de tela */
 /* a partir telas 768px */
@@ -394,9 +406,23 @@ strong{
         flex-direction: row;
     }
 
+    .projeto-card.card-reverse {
+        flex-direction: row-reverse;
+        justify-content: end;
+    }
+
+    .card-reverse.card-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+    }
+
     .card-img{
         width: 55%;
     }
+
 }
 
 /* 1200px */
@@ -414,7 +440,7 @@ strong{
     }
 
     h1{
-        font-size: 85px;
+        font-size: 70px;
     }
 
     h2{
@@ -440,4 +466,15 @@ strong{
     .projetos{
         padding: 160px 240px 64px;
     }
+}
+
+@media (max-width: 992px) {
+    
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
 }
