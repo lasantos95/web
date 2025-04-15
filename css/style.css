@@ -177,6 +177,11 @@ strong{
     width: 100%;
 }
 
+.foto-perfil{
+    border-radius: 100%;
+    
+}
+
 /* botões */
 .menu-link {
     display: flex;
