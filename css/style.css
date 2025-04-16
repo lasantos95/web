@@ -426,7 +426,23 @@ strong{
     gap: 10px;
 }
 
+.row2 .sobre-lista li {
+    margin-bottom: 10px;
+}
 
+
+/* ACCORDION */
+.accordion-header {
+    width: 100%;
+    border: 1px solid var(--color-list);
+    display: flex;
+    background: transparent;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 8px 16px;
+    align-items: center;
+    transition: ease-in-out.5s;
+}
 
 
 /* CSS Responsivo */
