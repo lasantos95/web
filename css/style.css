@@ -434,7 +434,7 @@ strong{
 /* ACCORDION */
 .accordion-header {
     width: 100%;
-    border: 1px solid var(--color-list);
+    border: 1px solid transparent;
     display: flex;
     background: transparent;
     cursor: pointer;
@@ -443,6 +443,36 @@ strong{
     align-items: center;
     transition: ease-in-out.5s;
 }
+
+.accordion-header span,
+.accordion-header i {
+    color: var(--color);
+    text-transform: uppercase;
+}
+
+.accordion-body {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    display: none;
+}
+
+.accordion-item.active .accordion-header {
+    background: var(--color-shadow);
+
+}
+
+.accordion-item.active .accordion-header span {
+    font-weight: 500;
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+
+
 
 
 /* CSS Responsivo */
