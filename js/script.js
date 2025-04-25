@@ -15,12 +15,24 @@ function changeTheme () {
 toggleTheme.addEventListener("click", changeTheme);
 
 //function accordion
-accordionHeader.forEach(header => {
-    header.addEventListener("click", () => {
 
-        const accordionItem = header.parentElement;
-        const accordionActive = accordionItem.classList.contains("active");
-
-        accordionActive ? accordionItem.classList.remove("active") : accordionItem.classList.add("active");
-    })
-})
+document.addEventListener("DOMContentLoaded", () => {
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+  
+    accordionHeaders.forEach(header => {
+      header.addEventListener("click", () => {
+        const currentItem = header.parentElement;
+        const isActive = currentItem.classList.contains("active");
+  
+        // Fecha todos os itens
+        document.querySelectorAll(".accordion-item").forEach(item => {
+          item.classList.remove("active");
+        });
+  
+        // Se o item clicado não estava ativo, ativa ele
+        if (!isActive) {
+          currentItem.classList.add("active");
+        }
+      });
+    });
+  });
