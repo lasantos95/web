@@ -295,16 +295,16 @@ strong{
 
 .btn:hover span, 
 .btn:hover i {
-  color: var(--color-btn); 
+  color: var(--color-shadow) 
 }
 
 .icon-social {
   font-size: 20px;
-  color: var(--color-btn);
+  color: var(--color);
 }
 
 .icon-social:hover{
-  color: var(--color-btn);
+  color: var(--color-shadow);
 }
 
 /* Estrutura */
@@ -365,7 +365,8 @@ strong{
 /* ATUALIZAÇÕES FUTURAS - A CADA SEÇÃO NOVA, INCLUIR NESTE CAMPO */
 #home,
 .projetos,
-.sobre{
+.sobre, 
+.contato {
   padding: 40px 16px;
 }
 
@@ -472,6 +473,25 @@ strong{
 }
 
 /* Contato */
+.contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-top: 1px solid var(--color);
+    border-bottom: 1px solid var(--color);
+}
+
+.contato span{
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.contato span:hover{
+    color: var(--color-shadow);
+
+}
 
 /* Rodapé */
 footer {

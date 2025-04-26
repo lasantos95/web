@@ -3,6 +3,7 @@
 const toggleTheme = document.getElementById("toggleTheme");
 const rootHtml = document.documentElement;
 const accordionHeader = document.querySelectorAll(".accordion-header");
+const menuLinks = document.querySelectorAll(".menu-link");
 
 function changeTheme () {
     const currentTheme = rootHtml.getAttribute("data-theme");
@@ -13,6 +14,14 @@ function changeTheme () {
 }
 
 toggleTheme.addEventListener("click", changeTheme);
+
+menuLinks.forEach(item => {
+  item.addEventListener("click", () => {
+    menuLinks.forEach(i => i.classList.remove ("active"));
+    item.classList.add("active");
+  })
+})
+
 
 //function accordion
 
@@ -36,3 +45,5 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+
