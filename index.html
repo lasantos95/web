@@ -300,6 +300,42 @@
                     </div>
                                 
                 </article>
+
+                <h2>Slides Imagens</h2>
+
+                <div class="carousel">
+                     
+                    <input type="radio" name="carousel" id="slide1" checked>
+                    <input type="radio" name="carousel" id="slide2">
+                    <input type="radio" name="carousel" id="slide3">
+    
+                    <div class="slides">
+    
+                        <!-- Foto 1 -->
+                        <div class="slide">
+                            <img src="img/slide1.jpg" alt="Imagem 1">
+                        </div>
+    
+                        <!-- Foto 2 -->
+                        <div class="slide">
+                            <img src="img/slide2.jpg" alt="Imagem 2">
+                        </div>
+    
+                        <!-- Foto 3 -->
+                        <div class="slide">
+                            <img src="img/slide3.jpg    " alt="Imagem 3">
+                        </div>
+    
+                    </div> <!-- Fim Slides -->
+                    
+                    <div class="navigation">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+    
+                </div>
+    
     
     
             </div>
@@ -519,20 +555,33 @@
             <p>
                 Entre em contato preenchendo o formulário abaixo.
             </p>
-
-            <form action="https://formspree.io/f/meogoavr" method="post">
-                <label for="nome" class="" id="">
+    
+            <form action="https://formspree.io/f/xanoneae" method="post" class="form-contato">
+    
+    
+                <label for="nome" class="name-label" id="name-label">
                     Nome *
                 </label>
-
-                <input type="text" placeholder="Digite seu nome" name="nome" id="" class="" required>
-
-                <button type="submit">
+                <input type="text" placeholder="Digite o seu nome completo" name="nome" id="nome" class="name-input"
+                    required>
+    
+    
+                <label for="email" class="email-label" id="email">
+                    E-mail *
+                </label>
+                <input type="email" class="email-input" id="email" name="email" placeholder="Digite o seu e-mail" required>
+    
+                <label for="mensagem" id="mensagem" class="label-mensagem">
+                    Mensagem *
+                </label>
+                <textarea name="mensagem" id="mensagem" class="input-mensagem" placeholder="Digite sua mensagem" required>
+                </textarea>
+    
+                <button type="submit" class="btn btn-primary">
                     Enviar
                 </button>
-
-
-
+    
+    
             </form>
 
             
